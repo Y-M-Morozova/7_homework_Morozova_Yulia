@@ -1,1 +1,11 @@
-# 7_homework_Morozova_Yulia
+# Морозова Юлия, OTUS, группа Postgre-DBA-2023-11
+
+## Домашнее задание №7 по теме: «Блокировки PostgreSQL»
+
+<br/><br/>
+
+1. 
+
+   
+ 
+<br/><br/>
