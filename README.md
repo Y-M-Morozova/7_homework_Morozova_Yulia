@@ -15,9 +15,9 @@
     alter system set deadlock_timeout = 200;
     ```
     
- обновляю конфигурацию кластера, снова проверяю, все ок:
+    обновляю конфигурацию кластера, снова проверяю, все ок:
 
-![1_1](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/5740c0dc-4228-4b27-b582-e286e667cbf0)
+    ![1_1](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/5740c0dc-4228-4b27-b582-e286e667cbf0)
 
 
 <br/><br/>
