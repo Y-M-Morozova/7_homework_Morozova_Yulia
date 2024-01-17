@@ -25,11 +25,18 @@
 
     ![1_2](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/064853aa-fb67-4c78-8b6a-828f180f5327)
 
-   <br/><br/>
-
-   открываю еще один терминал ssh , подключаюсь к БД locks, селект из таблицы  ``accounts`` - ок:
+     открываю еще один терминал ssh , подключаюсь к БД locks, селект из таблицы  ``accounts`` - ок:
 
       ![1_3](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/f0dd5411-eb96-446c-919a-779fb1397e5d)
 
  
+   в первом терминале начинаю транзакцию и пытаюсь обновить строку:
+
+    ![1_22_1](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/484491de-7fe5-49a8-9450-a6073a8dd002)
+
+   во втором терминале тоже открываю транзакцию и тоже пытаюсь обновить эту же строку и подвисаю:
+
+    ![1_22_2](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/970a4708-b19f-4204-b192-b6caf073061e)
+
+    
    
