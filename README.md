@@ -19,6 +19,14 @@
 
     ![1_1](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/5740c0dc-4228-4b27-b582-e286e667cbf0)
 
-
 <br/><br/>
 
+2. Для того, чтобы воспроизвести ситуацию, при которой в журнале появятся такие сообщения, сначала сделаю таблицу ``accounts`` , вставлю три строки:
+
+    ![1_2](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/064853aa-fb67-4c78-8b6a-828f180f5327)
+
+   <br/><br/>
+
+   
+
+   
