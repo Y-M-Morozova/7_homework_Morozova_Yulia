@@ -27,6 +27,9 @@
 
    <br/><br/>
 
-   
+   открываю еще один терминал ssh , подключаюсь к БД locks, селект из таблицы  ``accounts`` - ок:
 
+      ![1_3](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/f0dd5411-eb96-446c-919a-779fb1397e5d)
+
+ 
    
