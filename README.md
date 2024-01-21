@@ -64,15 +64,18 @@
 
    Первая транзакция обновляет и ожидаемо блокирует строку:
 
-   ![2_1_1](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/16088dcd-01d8-4f54-a375-1188e08de134)
+    ![2_1](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/d878c467-3143-448e-8d45-c2603e647f2e)
+  
 
-   вторая транзакция пытается тоже обновить строку и ожидаемо подвисает:
+   вторая транзакция пытается тоже обновить ту же самую строку и ожидаемо подвисает:
 
-    ![2_1_2](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/a73ca8a5-77d1-4454-9c17-1315eef21092)
+    ![2_2](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/4033c09b-cd79-4517-8bc1-e689d651694d)
+
 
    и третья тоже самое обновляет и так же подвисает:
 
-    ![2_1_3](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/c8f059c3-55e6-478b-90e7-1213dbcb9d40)
+    ![2_3](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/328819ed-7e9e-4b36-9490-d5da7febfb54)
+
 
    
  3. Смотрим блокировки транзакций с помощью созданного представления над pg_locks.
