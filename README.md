@@ -56,9 +56,27 @@
 
 **II.Смоделируйте ситуацию обновления одной и той же строки тремя командами UPDATE в разных сеансах. Изучите возникшие блокировки в представлении pg_locks и убедитесь, что все они понятны. Пришлите список блокировок и объясните, что значит каждая.**
 
-1. Открываю 3 терминала(ssh) и в первом создаю представление над pg_locks (как на курсах) ``locks_v``:
+1. Открываю 3 терминала(ssh) и в первом создаю представление над pg_locks ``locks_v``:
 
-    ![2_1_0](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/3de91632-5f2d-49cb-bd46-e183c9ab672a)
+```sql
+CREATE VIEW locks_v AS
+SELECT pid,
+       locktype,
+       CASE locktype
+         WHEN 'relation' THEN relation::REGCLASS::text
+         WHEN 'virtualxid' THEN virtualxid::text
+         WHEN 'transactionid' THEN transactionid::text
+         WHEN 'tuple' THEN relation::REGCLASS::text||':'||tuple::text
+       END AS lockid,
+       mode,
+       granted
+FROM pg_locks;
+```
+
+представление создала:
+
+![2_view](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/65a06a0c-6dc8-42fe-a7c1-eea55e46383f)
+
 
 2. во всех 3х терминалах идентифицирую транзакции и сессии, начинаю транзакцию и пытаюсь обновить одну и ту же строку командой: ``UPDATE accounts SET amount = amount + 100.00 WHERE acc_no = 1;``
 
@@ -66,7 +84,6 @@
 
     ![2_1](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/d878c467-3143-448e-8d45-c2603e647f2e)
   
-
    вторая транзакция пытается тоже обновить ту же самую строку и ожидаемо подвисает:
 
     ![2_2](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/4033c09b-cd79-4517-8bc1-e689d651694d)
@@ -75,10 +92,11 @@
    и третья тоже самое обновляет и так же подвисает:
 
     ![2_3](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/328819ed-7e9e-4b36-9490-d5da7febfb54)
-
-
    
- 3. Смотрим блокировки транзакций с помощью созданного представления над pg_locks.
+ 3. Смотрю блокировки транзакций с помощью созданного представления ``locks_v`` над pg_locks.
     Первая транзакция:  
+
+     ![2_7](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/5f5aa3f7-f4e8-4309-96db-af8047b97f29)
+
 
 
