@@ -58,9 +58,9 @@
 
 1. Открываю 3 терминала(ssh) и в первом создаю представление над pg_locks ``locks_v``:
 
-```sql
-CREATE VIEW locks_v AS
-SELECT pid,
+    ```sql
+    CREATE VIEW locks_v AS
+    SELECT pid,
        locktype,
        CASE locktype
          WHEN 'relation' THEN relation::REGCLASS::text
@@ -70,13 +70,10 @@ SELECT pid,
        END AS lockid,
        mode,
        granted
-FROM pg_locks;
-```
+    FROM pg_locks;
+    ```
 
-представление создала:
-
-![2_view](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/65a06a0c-6dc8-42fe-a7c1-eea55e46383f)
-
+    ![2_view](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/35da1266-96ff-4475-8943-d207f2b4bad8)
 
 2. во всех 3х терминалах идентифицирую транзакции и сессии, начинаю транзакцию и пытаюсь обновить одну и ту же строку командой: ``UPDATE accounts SET amount = amount + 100.00 WHERE acc_no = 1;``
 
