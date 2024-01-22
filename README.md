@@ -112,4 +112,10 @@
 
     вижу, что третья транзакция так же ожидает получение блокировки типа tuple для обновляемой строки(так же ``granted = f``).
 
+    Общую картину текущих ожиданий можно увидеть в представлении pg_stat_activity. Для удобства можно добавить и информацию о блокирующих процессах:
 
+    ```sql
+     SELECT pid, wait_event_type, wait_event, pg_blocking_pids(pid) 
+     FROM pg_stat_activity 
+     WHERE backend_type = 'client backend';
+    ```
