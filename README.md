@@ -166,4 +166,7 @@
 
    ![5](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/1dfb13b9-9607-4ac1-b0dc-066ed8fa977d)
 
-   
+   ***     
+### * Задание со звездочкой *
+
+
