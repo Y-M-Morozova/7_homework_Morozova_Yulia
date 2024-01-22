@@ -206,6 +206,14 @@
 
      ![8](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/18ccc1d9-1d7b-483a-b6bc-acc7a10f06d6)
 
+     в первом терминале сдвигаюсь еще на одну строку(``fetch1;``) и получаю взаимоблокировку!!!
+
+     ![9](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/c8710bdc-c246-4847-b5e3-926a2baf1496)
+
+     
+
+
+    
 
      
 
