@@ -184,6 +184,8 @@
         FOR UPDATE;
     ```
 
+    ![6_1](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/fee95cd3-7faa-4699-858e-a94d214a04d6)
+
      Во втором терминале открываю транзакцию и декларирую курсор ``c2`` , но тут выборка пойдет уже в другую(обратную) сторону - определяем с помощью ``desc``:
 
     ```sql
@@ -191,5 +193,9 @@
         SELECT * FROM accounts ORDER BY acc_no DESC 
         FOR UPDATE;
     ```
+
+    ![6_2](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/deb1e725-868f-4caf-8034-5873949516dd)
+
+    
 
     
