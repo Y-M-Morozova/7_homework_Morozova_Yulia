@@ -95,5 +95,5 @@
 
      ![2_7](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/5f5aa3f7-f4e8-4309-96db-af8047b97f29)
 
-
+    вижу блокировки типа ``relation`` для таблицы ``accounts`` и первичного ключа таблицы ``accounts_pkey`` в режиме ``RowExclusiveLock`` - устанавливается на изменяемое отношение.
 
