@@ -197,7 +197,11 @@
     ![6_2](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/deb1e725-868f-4caf-8034-5873949516dd)
 
   3. Получаем результаты запроса через курсор с помощью ``fetch``
-     <br> в первом терминале командой: ``FETCH c1;`` :
+     <br> в первом терминале командой: ``FETCH c1;``, а во втором терминале терминале командой: ``FETCH c2;`` :
+
+     ![7_итого](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/2bbec1b4-1b12-4e4b-a9a5-95be3ac0429e)
+
+     
 
      
 
