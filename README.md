@@ -130,18 +130,31 @@
 
 1. Для воспроизведения взаимоблокировки(ошибки deadlock) откроем три терминала (ssh) и в каждом будем выполнять команды ``update`` таблицы ``accounts``.
 
-   в первом терминале откроем транзакцию и выполним команду ``UPDATE accounts SET amount = amount - 100.00 WHERE acc_no = 1;``:
+   в первом терминале открываю транзакцию и выполним команду ``UPDATE accounts SET amount = amount - 100.00 WHERE acc_no = 1;``:
 
     ![3_1_1](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/87eab4da-8e68-4da1-aa69-8a443790ccc5)
 
-   в втором терминале откроем транзакцию и выполним команду ``UPDATE accounts SET amount = amount - 100.00 WHERE acc_no = 2;``:    
+   в втором терминале открываю транзакцию и выполним команду ``UPDATE accounts SET amount = amount - 100.00 WHERE acc_no = 2;``:    
 
     ![3_1_2](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/2b6c7977-4470-48eb-9fb6-995227f9257f)
 
 
-   в третьем терминале откроем транзакцию и выполним команду ``UPDATE accounts SET amount = amount - 100.00 WHERE acc_no = 3;``:  
+   в третьем терминале открываю транзакцию и выполним команду ``UPDATE accounts SET amount = amount - 100.00 WHERE acc_no = 3;``:  
 
     ![3_1_3](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/6ff645c3-fc0e-4798-8a11-9c6ca23b0772)
 
+    далее в первом терминале выполняю ``UPDATE accounts SET amount = amount + 100.00 WHERE acc_no = 2;``:
+
+    ![4_1_1](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/6cc529b2-1e08-43f3-a3d0-743bfcb75d08)
+
+    далее во втором терминале выполняю ``UPDATE accounts SET amount = amount + 100.00 WHERE acc_no = 3;``:
+
+    ![4_1_2](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/5e893431-1a02-4582-b699-10aa17c503f4)
 
 
+    далее в третьем терминале выполняю ``UPDATE accounts SET amount = amount + 100.00 WHERE acc_no = 1;``,
+    <br> но так как возникает циклическое ожидание, которое никогда не завершится само по себе, то третья транзакция, не получив доступ к ресурсу, инициирует проверку взаимоблокировки
+    и обрывается сервером(вижу ошибку взаимоблокировки ``ERROR:  deadlock detected`` в третьем терминале):   
+   ![4_1_3](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/7d71dbc2-55c8-4da4-bc54-11e22c715c10)
+
+   
