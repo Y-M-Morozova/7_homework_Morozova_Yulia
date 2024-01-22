@@ -91,11 +91,17 @@
     ![2_3](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/328819ed-7e9e-4b36-9490-d5da7febfb54)
    
  3. Смотрю блокировки транзакций с помощью созданного представления ``locks_v`` над ``pg_locks``.
+
     Первая транзакция:  
 
-     ![2_7](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/5f5aa3f7-f4e8-4309-96db-af8047b97f29)
+    ![2_7](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/5f5aa3f7-f4e8-4309-96db-af8047b97f29)
 
     вижу блокировки типа ``relation`` для таблицы ``accounts`` и первичного ключа таблицы ``accounts_pkey`` в режиме ``RowExclusiveLock`` - устанавливается на изменяемое отношение,
-    так же вижу блокировки типов ``virtualxid`` (виртуальный идентификатор транзакции) и ``transactionid``(индентификатор транзакции) в режиме ``ExclusiveLock`` - удерживаются каждой транзакцией для самой себя.
+    <br>так же вижу блокировки типов ``virtualxid`` (виртуальный идентификатор транзакции) и ``transactionid``(индентификатор транзакции) в режиме ``ExclusiveLock`` - удерживаются каждой транзакцией для самой себя.
+
+    Вторая транзакция:
+
+    ![2_7_2](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/9101854f-9adb-406f-8663-5223d2405a02)
 
     
+
