@@ -128,10 +128,20 @@
     
 **III.Воспроизведите взаимоблокировку трех транзакций. Можно ли разобраться в ситуации постфактум, изучая журнал сообщений?**
 
-1. Для воспроизведения взаимоблокировки(ошибки deadlock) откроем три терминала и в каждом будем выполнять команды ``update`` таблицы ``accounts``.
+1. Для воспроизведения взаимоблокировки(ошибки deadlock) откроем три терминала (ssh) и в каждом будем выполнять команды ``update`` таблицы ``accounts``.
 
-в первом терминале откроем транзакцию и выполним команду ``UPDATE accounts SET amount = amount - 100.00 WHERE acc_no = 1;``:
+   в первом терминале откроем транзакцию и выполним команду ``UPDATE accounts SET amount = amount - 100.00 WHERE acc_no = 1;``:
 
-![3_1_1](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/87eab4da-8e68-4da1-aa69-8a443790ccc5)
+    ![3_1_1](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/87eab4da-8e68-4da1-aa69-8a443790ccc5)
 
-    
+   в втором терминале откроем транзакцию и выполним команду ``UPDATE accounts SET amount = amount - 100.00 WHERE acc_no = 2;``:    
+
+    ![3_1_2](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/2b6c7977-4470-48eb-9fb6-995227f9257f)
+
+
+   в третьем терминале откроем транзакцию и выполним команду ``UPDATE accounts SET amount = amount - 100.00 WHERE acc_no = 3;``:  
+
+    ![3_1_3](https://github.com/Y-M-Morozova/7_homework_Morozova_Yulia/assets/153178571/6ff645c3-fc0e-4798-8a11-9c6ca23b0772)
+
+
+
